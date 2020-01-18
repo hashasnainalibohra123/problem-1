@@ -1,0 +1,46 @@
+
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+vector<string> all_strings;
+
+func(string hash, int pos, string code)
+{
+    if(pos<hash.length())
+    {
+        
+        if((int)(hash[pos]))!=0)
+        {
+            code=code + (char)(64+(int)(hash[pos]));
+            func(hash, pos+1, code);
+        }
+        if(pos<hash.length()-1 && (int)(hash.substr(pos,pos+1))<27 && (int)(hash.substr(pos,pos+1))>9)
+        {
+            code=code + (char)(64+(int)(hash.substr(pos,pos+1));
+            func(hash, pos+2, code);
+        }
+    }
+    else
+    {
+        all_strings.push_back(code);
+    }
+}
+
+
+int main()
+{
+
+    string hash;
+    cin>>hash;
+    string code;
+    func(hash, 0, code)
+
+    for(int i=0;i<all_strings.length();i++)
+    {
+        cout<<all_strings[i];
+    }
+    return 0;
+}
+
