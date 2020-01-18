@@ -1,0 +1,6 @@
+/* 123 - index 
+		 * 000 - no element -- 123 
+		 * 001 - space before index 3 --  between the 12 3
+		 * 010 - space before  index 2  -- between 1 23
+		 * 011 - space before  index 2,3 --- space between  1 2 3
+		 */
