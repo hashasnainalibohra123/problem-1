@@ -11,14 +11,14 @@ func(string hash, int pos, string code)
     if(pos<hash.length())
     {
         
-        if((int)(hash[pos]))!=0)
+        if(stoi(hash[pos]))!=0)
         {
-            code=code + (char)(64+(int)(hash[pos]));
+            code=code + (char)(64+stoi(hash[pos]));
             func(hash, pos+1, code);
         }
-        if(pos<hash.length()-1 && (int)(hash.substr(pos,pos+1))<27 && (int)(hash.substr(pos,pos+1))>9)
+        if(pos<hash.length()-1 && stoi(hash.substr(pos,pos+1))<27 && stoi(hash.substr(pos,pos+1))>9)
         {
-            code=code + (char)(64+(int)(hash.substr(pos,pos+1));
+            code=code + (char)(64+stoi(hash.substr(pos,pos+1));
             func(hash, pos+2, code);
         }
     }
